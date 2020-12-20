@@ -4,6 +4,7 @@
 
 This repository contains the python code for training and testing multiple models on the [UCI ML Repository's Parkinson's Disease Classification Data Set](https://archive.ics.uci.edu/ml/datasets/Parkinson%27s+Disease+Classification). The aim of this project was to analyse the performance of different sklearn models on their ability to classify if a patient has Parkinson's Disease or not from the speech signal analysis of the patient.  
 
+Contributors: Abhimanyu Jha, AkshalaBhatnagar, Ayaan Kakkar 
 
 ## Running Pre-trained Models
 >See run_model.py
