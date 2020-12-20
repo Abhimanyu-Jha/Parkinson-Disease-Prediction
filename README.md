@@ -6,13 +6,13 @@ This repository contains the python code for training and testing multiple model
 
 
 ## Running Pre-trained Models
->(run_model.py)
+>See run_model.py
 1. Use `python run_model.py --help` to see the complete list of trained models. 
 2. Choose a model with the `python run_model.py --model {model_number}` to use the pretrained model on the parkinsons's disease dataset.
    
 ## Everything from scratch
 1. `EDA.py` to see the data analysis visual plots.
-2. `generate_weights.py` to save weights for models with best hyperparameters ([see more](##Generating-Weights))
+2. `generate_weights.py` to save weights for models with best hyperparameters
 3. `run_model.py` to see results on the saved weights.
 
 
@@ -26,7 +26,7 @@ This repository contains the python code for training and testing multiple model
 | EDA.py               | Exploratory Data Analysis on datas       |
 
 
-## Generating-Weights
->(generate_weights.py)
+## Generating Weights
+>See generate_weights.py
 1. Use ```python run_model.py --help``` to see the complete list of trained models. 
 2. Choose a model with the `python run_model.py --model {model_number}` to use the pretrained model on the parkinsons's disease dataset.   
