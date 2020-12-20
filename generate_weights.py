@@ -1,7 +1,7 @@
 import argparse
 import pickle
 import sys
-from best_params import best_models
+from best_params import best_model
 
 
 if __name__ == "__main__":
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         sys.exit()
 
     def save_weights(model_num):
-        model = best_models[model_num]
+        model = best_model(model_num)
         filename = f"./weights/{model_dict[model_num]}.sav"
         print(f"\nSaving {filename} ...")
         pickle.dump(model, open(filename, 'wb'))
