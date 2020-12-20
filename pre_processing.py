@@ -1,14 +1,8 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.manifold import TSNE
 from sklearn.feature_selection import f_classif, SelectKBest
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import seaborn as sns
 
 df = pd.read_csv('./dataset/pd_speech_features.csv')
 id = df['id']
@@ -93,3 +87,8 @@ testX_copy = sc.transform(testX_copy)
 pca = PCA(n_components=0.99)
 trainX_copy = pca.fit_transform(trainX_copy)
 testX_copy = pca.transform(testX_copy)
+
+if __name__ == "__main__":
+    print("Data Pre-processed Succesfully. Run the script run_model.py")
+else:
+    X_train, X_test, y_test, y_train = trainX_copy, testX_copy, testY_copy, testY_copy
