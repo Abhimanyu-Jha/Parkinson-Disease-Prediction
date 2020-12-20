@@ -1,4 +1,4 @@
-# Parkinson-Disease-Prediction
+# Parkinson's Disease Prediction
 
 > Parkinson’s Disease Prediction from Speech Analysis, Machine Learning Project at Indraprastha Institue of Information Technology, Delhi
 
@@ -6,5 +6,19 @@ This repository contains the python code for training and testing multiple model
 
 
 ## Running Models (run_model.py)
+1. Use `python run_model.py --help` to see the complete list of trained models. 
+2. Choose a model with the `python run_model.py --model {model_number}` to use the pretrained model on the parkinsons's disease dataset.
+   
+## File Descriptions
+| Name                 | Descripton                               |
+| ---------------------|:----------------------------------------:| 
+| run_model.py         | Run Model from pre-trained weights       | 
+| best_params.py       | Get Models for best hyperparameters      |   
+| generate_weights.py  | Save Weights for best models             | 
+| pre_processing.py    | PCA, Feature Selection, train-test split |
+| EDA.py               | Exploratory Data Analysis on datas       |
+
+
+## Generating Weights (generate_weights.py)
 1. Use ```python run_model.py --help``` to see the complete list of trained models. 
 2. Choose a model with the `python run_model.py --model {model_number}` to use the pretrained model on the parkinsons's disease dataset.   
