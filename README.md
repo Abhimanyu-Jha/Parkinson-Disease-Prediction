@@ -23,10 +23,12 @@ This repository contains the python code for training and testing multiple model
 | best_params.py       | Get Models for best hyperparameters      |   
 | generate_weights.py  | Save Weights for best models             | 
 | pre_processing.py    | PCA, Feature Selection, train-test split |
-| EDA.py               | Exploratory Data Analysis on datas       |
+| EDA.py               | Exploratory Data Analysis on dataset     |
+| weights_original     | Weights from the Original Project        |
 
 
 ## Generating Weights
 >See generate_weights.py
-1. Use ```python run_model.py --help``` to see the complete list of trained models. 
-2. Choose a model with the `python run_model.py --model {model_number}` to use the pretrained model on the parkinsons's disease dataset.   
+1. Use ```python generate_weights.py --help``` to see the complete list of trained models. 
+2. Choose a model with the `python generate_weights.py --model {model_number}` to generate fresh set of weights from `best_params.py`.
+  

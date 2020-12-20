@@ -65,11 +65,11 @@ grid.fit(X_train, y_train)
 best_models[6] = grid
 
 # Gradient Boost
-param_grid = {'n_estimators': [300, 400, 500],
+param_grid = {'n_estimators': [100, 150, 200, 250, 300, 350, 400, 450, 500],
               'criterion': ['friedman_mse', 'mse'],
-              'max_features': ['auto', 'sqrt', 'log2'],
-              'learning_rate': [0.001, 0.01, 0.1, 1.0, 10.0],
-              'loss': ['deviance', 'exponential']
+              'max_features': ['sqrt', 'log2'],
+              'learning_rate': [0.001, 0.01, 0.1, 1.0, 2, 4],
+              'loss': ['deviance', 'exponential'],
               }
 grid = GridSearchCV(GradientBoostingClassifier(
     random_state=0), param_grid, refit=True, verbose=3)
