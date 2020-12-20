@@ -91,4 +91,4 @@ testX_copy = pca.transform(testX_copy)
 if __name__ == "__main__":
     print("Data Pre-processed Succesfully. Run the script run_model.py")
 else:
-    X_train, X_test, y_test, y_train = trainX_copy, testX_copy, testY_copy, testY_copy
+    X_train, X_test, y_test, y_train = trainX_copy, testX_copy, testY_copy, trainY_copy

@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
     model_dict = {1: "naive_bayes", 2: "logistic_regression", 3: "decision_tree",
-                  4: "svm", 5: "random_forest", 6: "ada_boost", 7: "gradient_boost", 8: "xg_boost", 9: "neural_net"}
+                  4: "svm", 5: "random_forest", 6: "ada_boost", 7: "gradient_boost", 8: "xg_boost", 9: "neural_net", 10: "all"}
     parser.add_argument(
         "-m", "--model", type=int, choices=list(range(1, len(model_dict)+1)), help="\
             \n1. Naive Bayes \
