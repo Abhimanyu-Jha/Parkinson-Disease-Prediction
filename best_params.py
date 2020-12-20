@@ -16,7 +16,22 @@ clf.fit(X_train, y_train)
 best_models[1] = clf
 
 # Logistic Regression
+param_grid = {'penalty': ['l1', 'l2'],
+              'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000]}
+grid = GridSearchCV(LogisticRegression(random_state=0),
+                    param_grid, refit=True, verbose=3)
+grid.fit(X_train, y_train)
+best_models[2] = grid
 
+# decision_tree
+param_grid = {'criterion': ['gini', "entropy"],
+              'splitter': ["best", "random"],
+              'max_depth': range(10, 50, 5),
+              'min_samples_split': range(2, 10, 1)}
+grid = GridSearchCV(DecisionTreeClassifier(random_state=0),
+                    param_grid, refit=True, verbose=3)
+grid.fit(X_train, y_train)
+best_models[3] = grid
 
 # SVM
 param_grid = {'C': [0.1, 1, 10, 100, 1000],
@@ -39,7 +54,29 @@ grid = GridSearchCV(RandomForestClassifier(random_state=0, n_jobs=10),
 grid.fit(X_train, y_train)
 best_models[5] = grid
 
-# xg_boost
+# ADA Boost
+param_grid = {'n_estimators': range(10, 100, 5),
+              'algorithm': ['SAMME', 'SAMME.R'],
+              'learning_rate': [0.001, 0.01, 0.1, 1.0, 10.0]
+              }
+grid = GridSearchCV(AdaBoostClassifier(random_state=0),
+                    param_grid, refit=True, verbose=3)
+grid.fit(X_train, y_train)
+best_models[6] = grid
+
+# Gradient Boost
+param_grid = {'n_estimators': [300, 400, 500],
+              'criterion': ['friedman_mse', 'mse'],
+              'max_features': ['auto', 'sqrt', 'log2'],
+              'learning_rate': [0.001, 0.01, 0.1, 1.0, 10.0],
+              'loss': ['deviance', 'exponential']
+              }
+grid = GridSearchCV(GradientBoostingClassifier(
+    random_state=0), param_grid, refit=True, verbose=3)
+grid.fit(X_train, y_train)
+best_models[7] = grid
+
+# XG Boost
 param_grid = {'n_estimators': range(0, 100, 5),
               'learning_rate': [0.01, 0.1],
               'max_depth': range(2, 6)
