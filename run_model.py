@@ -33,7 +33,6 @@ filename = f"./weights/{model_dict[args.model]}.sav"
 print(f"\nLoading {filename} ...")
 
 loaded_model = pickle.load(open(filename, 'rb'))
-# loaded_model.fit(X_train, y_train)
-# result = loaded_model.score(X_test, y_test)
-result = 100
-print(f"Model Accuracy: {result}%")
+result = loaded_model.score(X_test, y_test)
+
+print(f"({model_dict[args.model]})Model Accuracy: {result}%")
